@@ -25,6 +25,6 @@ JWT_SECRET=5b9c88781b15d607659fd5da858689e5554db153d88f7be93762200978cb33ce6e7b6
 ## Run the project
 npm run dev
 
-note: i have attached the API documentation on the repository. Kindly open it on postman and test the endpoints created on it.
+note: i have attached the API documentation on the repository **(file name: tinkteq-authAPI.postman_collection)**. Kindly open it on postman and test the endpoints created on it.
 
 Thank you 
