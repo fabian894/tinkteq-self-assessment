@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "0e3442c4-31e8-4c5c-8cfb-0b094f1e0eda",
+		"name": "tinkteq-authAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20427388"
+	},
+	"item": [
+		{
+			"name": "user login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM3YzYyNzYyNzgyNTlkNWM1ZDE1NiIsImlhdCI6MTczODc2ODI5NywiZXhwIjoxNzM5MzczMDk3fQ.TlUJvBfJSeTiDYgZQFYRQMvBi0ydywGuOf0JmfYreOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"stephen@gmail.com\",\r\n  \"password\": \"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM3YzYyNzYyNzgyNTlkNWM1ZDE1NiIsImlhdCI6MTczODc2ODI5NywiZXhwIjoxNzM5MzczMDk3fQ.TlUJvBfJSeTiDYgZQFYRQMvBi0ydywGuOf0JmfYreOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\": \"stephen\",\r\n  \"email\": \"stephen@gmail.com\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM4ZWJmODYyZWMyYzcyMzMxZjEyOSIsImVtYWlsIjoiZmFiaWFuQGdtYWlsLmNvbSIsInJvbGUiOiJzaGlwcGVyIiwiaWF0IjoxNzM4Nzc4MTEzLCJleHAiOjE3Mzg3NzkwMTN9.1RsbapBeQQ3uYWiMUUtO3cY2EXNSRgGqzHW8pjptKFU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/user/67a38ebf862ec2c72331f129",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"67a38ebf862ec2c72331f129"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM3YzYyNzYyNzgyNTlkNWM1ZDE1NiIsImlhdCI6MTczODc2ODI5NywiZXhwIjoxNzM5MzczMDk3fQ.TlUJvBfJSeTiDYgZQFYRQMvBi0ydywGuOf0JmfYreOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//   \"username\": \"onyedika\",\r\n  \"email\": \"fabian@gmail.com\",\r\n  \"password\": \"hashedpassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check shipper role",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM4ZWJmODYyZWMyYzcyMzMxZjEyOSIsImVtYWlsIjoiZmFiaWFuQGdtYWlsLmNvbSIsInJvbGUiOiJzaGlwcGVyIiwiaWF0IjoxNzM4Nzc4MjYxLCJleHAiOjE3Mzg3NzkxNjF9.4n16CLlEvpN71IfoJNRxM49aMq_N7XoetfUDdszbjYA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//   \"username\": \"onyedika\",\r\n  \"email\": \"fabian@gmail.com\",\r\n  \"password\": \"hashedpassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/shipments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"shipments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check admin role",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM4ZWJmODYyZWMyYzcyMzMxZjEyOSIsImVtYWlsIjoiZmFiaWFuQGdtYWlsLmNvbSIsInJvbGUiOiJzaGlwcGVyIiwiaWF0IjoxNzM4Nzc4MjYxLCJleHAiOjE3Mzg3NzkxNjF9.4n16CLlEvpN71IfoJNRxM49aMq_N7XoetfUDdszbjYA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//   \"username\": \"onyedika\",\r\n  \"email\": \"fabian@gmail.com\",\r\n  \"password\": \"hashedpassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/admin/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"admin",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check carrier role",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTM4ZWJmODYyZWMyYzcyMzMxZjEyOSIsImVtYWlsIjoiZmFiaWFuQGdtYWlsLmNvbSIsInJvbGUiOiJzaGlwcGVyIiwiaWF0IjoxNzM4Nzc4NTA0LCJleHAiOjE3Mzg3Nzk0MDR9.ufvMSOBV3KpK4mCcTzG3x0zgYfD0gMtG2H2lxNhRf28",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//   \"username\": \"onyedika\",\r\n  \"email\": \"fabian@gmail.com\",\r\n  \"password\": \"hashedpassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/accept-shipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"accept-shipment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
